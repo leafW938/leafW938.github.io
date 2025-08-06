@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>[Leaf Wang] - Game Developer Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="description" content="[Portfolio description for search engines]" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="[Leaf Wang]" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Social Media Sharing -->
+    <meta property="og:title" content="[Leaf Wang] - Game Developer Portfolio" />
+    <meta property="og:site_name" content="[Leaf Wang's Personal Website] - Game Developer Portfolio" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="[Portfolio description]" />
+    <meta property="og:url" content="[Your website URL]" />
+    <meta property="og:image" content="[Share image URL]" />
+    <meta property="og:type" content="website" />
+    
+    <style>
+        /* CSS Reset */
+        a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;-webkit-font-smoothing:antialiased;text-rendering:optimizelegibility}
+        article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+        body{line-height:1}
+        ul{list-style:none}
+        blockquote,q{quotes:none}
+        blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}
+        table{border-collapse:collapse;border-spacing:0}
+        em,i{font-style:italic}
+        b,strong{font-weight:700}
+        img{max-width:100%;height:auto}
+        button{background:transparent;border:none;border-radius:0;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;padding:0;margin:0;cursor:pointer}
+        
+        /* Font Definitions - Using original website fonts */
+        @font-face {
+            font-family: 'Noe Display';
+            src: url("fonts/Noe%20Text%20Bold.eot") format("embedded-opentype"),
+                 url("fonts/Noe%20Text%20Bold.woff") format("woff");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Avenir';
+            src: url('fonts/AvenirLTStd-Book.otf') format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Avenir';
+            font-style: italic;
+            src: url('fonts/AvenirLTStd-BookOblique.otf') format("opentype");
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: 'Avenir';
+            font-weight: 500;
+            src: url('fonts/AvenirLTStd-Medium.otf') format("opentype");
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Avenir';
+            font-style: italic;
+            font-weight: 500;
+            src: url('fonts/AvenirLTStd-MediumOblique.otf') format("opentype");
+        }
+
+        @font-face {
+            font-family: 'Avenir';
+            font-weight: 700;
+            src: url('fonts/AvenirLTStd-Black.otf') format("opentype");
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Avenir';
+            font-style: italic;
+            font-weight: 700;
+            src: url('fonts/AvenirLTStd-BlackOblique.otf') format("opentype");
+        }
+
+        body, button, input, select, textarea {
+            font-family: 'Avenir', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        h1, h2, h3, .creative-home__title, .work-section__title, .detail-title {
+            font-family: 'Noe Display', Georgia, "Times New Roman", serif;
+            line-height: 1.2;
+        }
+        
+        /* 基础样式 */
+        * {
+            box-sizing: border-box;
+            outline: 0;
+        }
+        
+        html {
+            font-size: 100%;
+        }
+        
+        body {
+            color: #000;
+            background: #fff;
+        }
+        
+        /* 容器和网格系统 */
+        .container {
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .container {
+                max-width: 1175px;
+            }
+        }
+        
+        .row {
+            margin: 0 -10px;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        [class*=" col-"], [class^=col-] {
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+            float: left;
+            min-height: 1px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .col-1 { width: 8.333% }
+            .col-2 { width: 16.666% }
+            .col-3 { width: 25% }
+            .col-4 { width: 33.333% }
+            .col-5 { width: 41.666% }
+            .col-6 { width: 50% }
+            .col-7 { width: 58.333% }
+            .col-8 { width: 66.666% }
+            .col-9 { width: 75% }
+            .col-10 { width: 83.333% }
+            .col-11 { width: 91.666% }
+            .col-12 { width: 100% }
+            .push-1 { margin-left: 8.333% }
+            .push-2 { margin-left: 16.666% }
+            .push-3 { margin-left: 25% }
+            .push-4 { margin-left: 33.333% }
+            .push-5 { margin-left: 41.666% }
+            .push-6 { margin-left: 50% }
+        }
+        
+        /* 标题样式 */
+        h1 {
+            font-size: 40px;
+            letter-spacing: -1px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            h1 {
+                font-size: 72px;
+                letter-spacing: -2px;
+            }
+        }
+        
+        h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            h2 {
+                font-size: 44px;
+                margin-bottom: 30px;
+            }
+        }
+        
+        h3 {
+            font-size: 24px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            h3 {
+                font-size: 32px;
+            }
+        }
+        
+        /* 链接样式 */
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        /* 段落样式 */
+        p {
+            font-size: 14px;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            p {
+                font-size: 17px;
+                margin-bottom: 30px;
+            }
+        }
+        
+        p a {
+            color: #30a16b;
+            text-decoration: underline;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            p a {
+                transition: color .15s;
+            }
+            p a:hover {
+                color: #000;
+            }
+        }
+        
+        /* Logo样式 */
+        .nav-logo {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        /* 导航栏样式 */
+        .creative-nav {
+            width: 100%;
+            height: 48px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 4;
+            background: #fff;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-nav {
+                height: 75px;
+            }
+        }
+        
+        .creative-nav:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .creative-nav__toggle {
+            overflow: hidden;
+            text-indent: -999px;
+            display: block;
+            width: 60px;
+            height: 48px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 3;
+            background: #fff;
+            transition: background .15s;
+        }
+        
+        .creative-nav__toggle:after,
+        .creative-nav__toggle:before {
+            content: "";
+            display: block;
+            background: #000;
+            height: 2px;
+            width: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: box-shadow .3s cubic-bezier(.165,.84,.44,1), background .3s cubic-bezier(.165,.84,.44,1), transform .3s cubic-bezier(.165,.84,.44,1) .3s;
+            transform: translate(-50%,-50%) rotate(0deg);
+            box-shadow: 0 -8px 0 0 #000, 0 8px 0 0 #000;
+        }
+        
+        .creative-nav__toggle:after {
+            box-shadow: none;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-nav__toggle {
+                display: none;
+            }
+        }
+        
+        .creative-nav__menu {
+            float: right;
+            left: 100%;
+            background: #f9f9f7;
+            justify-content: space-evenly;
+            position: absolute;
+            display: flex;
+            z-index: 2;
+            transition: left .3s;
+            width: 100%;
+            padding-right: 60px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-nav__menu {
+                background: transparent;
+                display: block;
+                position: relative;
+                left: 0;
+                width: auto;
+                padding: 0;
+            }
+        }
+        
+        .creative-nav__item {
+            text-align: center;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-nav__item {
+                display: block;
+                float: left;
+                text-align: left;
+            }
+        }
+        
+        .creative-nav__brand,
+        .creative-nav__link {
+            display: block;
+            color: #000;
+            line-height: 48px;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-nav__brand,
+            .creative-nav__link {
+                letter-spacing: 1px;
+                line-height: 75px;
+                margin: 0 30px;
+            }
+            .creative-nav__link:hover {
+                text-decoration: line-through;
+            }
+        }
+        
+        .creative-nav__brand {
+            font-size: 18px;
+            font-weight: 700;
+            float: left;
+            letter-spacing: 0;
+            margin: 0;
+            display: none;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-nav__brand {
+                transition: color .15s;
+                font-size: 24px;
+                display: block;
+            }
+            .creative-nav__brand:hover {
+                text-decoration: none;
+                color: #30a16b;
+            }
+        }
+        
+        /* 分隔线 */
+        .divider {
+            display: block;
+            border: none;
+            height: 8px;
+            width: 100%;
+        }
+        
+        .divider:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .divider:before {
+            content: "";
+            width: 80px;
+            height: 0;
+            margin: 0;
+            border: none;
+            border-top: 8px solid #30a16b;
+            float: left;
+        }
+        
+        .divider--right:before {
+            float: right;
+        }
+        
+        /* 主页样式 */
+        .creative-home {
+            position: relative;
+            padding-top: 60px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-home {
+                padding-top: 150px;
+            }
+        }
+        
+        /* Hero区域 */
+        .creative-hero {
+            position: relative;
+            padding: 0 20px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-hero {
+                text-align: right;
+                padding: 80px 0 60px;
+            }
+        }
+        
+        .creative-hero__link {
+            color: #000;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-hero__link {
+                font-size: 24px;
+            }
+            .creative-hero__link:hover {
+                text-decoration: line-through;
+            }
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-hero__content {
+                position: relative;
+                z-index: 1;
+                float: right;
+                margin-right: 8.333%;
+            }
+        }
+        
+        .creative-hero__title {
+            margin-bottom: 20px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-hero__title {
+                width: 600px;
+                float: right;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-hero__headshot {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        
+        .creative-hero__headshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .creative-hero__menu {
+            margin: 30px 0;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-hero__menu {
+                margin: 50px 0 0;
+            }
+        }
+        
+        /* 介绍部分 */
+        .intro .container {
+            padding: 30px 20px 40px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .intro .container {
+                padding: 100px 20px 90px;
+            }
+        }
+        
+        .intro__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 400px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .intro__content {
+                box-shadow: 15px 15px 20px rgba(0,0,0,.05);
+                padding: 40px 60px 40px 10px;
+                background: #fff;
+                position: relative;
+                z-index: 2;
+                min-height: 500px;
+            }
+        }
+
+        .intro__image-wrapper {
+            display: flex;
+            align-items: flex-start;
+            min-height: 400px;
+            padding-top: 400px;
+        }
+        
+        .intro__image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .intro__image-wrapper {
+                min-height: 500px;
+            }
+            
+            .intro__image {
+                height: 400px;
+                width: calc(100% + 80px);
+                margin-left: -40px;
+            }
+        }
+        
+        /* 作品部分 */
+        .work-section {
+            background: #f9f9f7;
+            padding: 40px 0 0;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .work-section {
+                padding-top: 100px;
+            }
+        }
+        
+        .work-section__categories,
+        .work-section__category,
+        .work-section__title {
+            text-align: center;
+        }
+        
+        .work-section__category {
+            display: block;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .work-section__category {
+                display: inline-block;
+                margin: 0 20px;
+            }
+        }
+        
+        .work-section__filter {
+            text-transform: uppercase;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: color .15s;
+        }
+        
+        .work-section__filter[data-active="true"] {
+            color: #30a16b;
+            text-decoration: line-through;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .work-section__filter {
+                cursor: pointer;
+                line-height: 1;
+            }
+            .work-section__filter:hover {
+                color: #30a16b;
+            }
+        }
+        
+        .work-section__posts {
+            position: relative;
+            min-height: 200px;
+        }
+        
+        /* 项目卡片 */
+        .project-item {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .project-item {
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }
+        }
+        
+        .project-item__image-link {
+            height: 180px;
+            padding: 0;
+            display: block;
+            overflow: hidden;
+            background: #e0e0e0;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .project-item__image-link {
+                height: 220px;
+                margin-top: 50px;
+            }
+        }
+        
+        .project-item__image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-item__content {
+            box-shadow: 0 10px 20px rgba(0,0,0,.05);
+            padding: 24px 30px 20px 30px;
+            background: #fff;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .project-item__content {
+                padding: 40px 60px 40px 60px;
+            }
+        }
+        
+        .project-item__category {
+            font-size: 11px;
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+            letter-spacing: .8px;
+        }
+
+        .project-item__title {
+            margin-bottom: 8px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .project-item__title {
+                margin-bottom: 15px;
+            }
+        }
+        
+        .project-item__excerpt p {
+            margin-bottom: 15px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .project-item__excerpt p {
+                margin-bottom: 24px;
+            }
+        }
+        
+        .project-item__link {
+            color: #000;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .project-item__link {
+                transition: color .15s;
+            }
+            .project-item__link:hover {
+                color: #30a16b;
+            }
+        }
+        
+        /* Read More button */
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #30a16b;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.15s;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        /* Detail Page Styles */
+        .detail-page {
+            display: none;
+            padding-top: 100px;
+            min-height: 100vh;
+            background: #fff;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .detail-page {
+                padding-top: 140px;
+            }
+        }
+        
+        .detail-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .detail-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .detail-title {
+                font-size: 48px;
+                margin-bottom: 30px;
+            }
+        }
+        
+        .detail-content {
+            margin-bottom: 60px;
+        }
+        
+        .detail-images {
+            margin-bottom: 30px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .detail-images {
+                margin-bottom: 0;
+            }
+        }
+        
+        .detail-image {
+            width: 100%;
+            height: 250px;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        .detail-text p {
+            margin-bottom: 20px;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: #30a16b;
+            color: #fff;
+            padding: 12px 30px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: background 0.15s;
+            margin: 40px auto;
+            display: block;
+            width: fit-content;
+        }
+        
+        .back-button:hover {
+            background: #267a52;
+            color: #fff;
+        }
+        
+        /* 联系部分 */
+        .contact-section .container {
+            position: relative;
+            padding-top: 60px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .contact-section .container {
+                padding: 150px 20px 104px;
+            }
+        }
+        
+        .contact-section__social {
+            text-align: right;
+        }
+        
+        .contact-section__social-link {
+            color: #000;
+            font-family: 'Noe Display', Georgia, "Times New Roman", serif;
+            font-size: 24px;
+            display: inline-block;
+            margin-bottom: 14px;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .contact-section__social-link {
+                transition: color .15s;
+                font-size: 36px;
+            }
+            .contact-section__social-link:hover {
+                color: #30a16b;
+            }
+        }
+        
+        /* 页脚 */
+        .creative-footer {
+            padding: 60px 0 18px;
+            border-bottom: 6px solid #30a16b;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-footer {
+                padding: 0 20px 18px;
+            }
+        }
+        
+        .creative-footer__copyright,
+        .creative-footer__credit {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #c3c3ab;
+            margin: 0;
+        }
+        
+        .creative-footer__copyright a,
+        .creative-footer__credit a {
+            color: #c3c3ab;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-footer__copyright,
+            .creative-footer__credit {
+                float: left;
+            }
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .creative-footer__credit {
+                float: right;
+            }
+        }
+        
+        /* 编辑提示样式 */
+        .edit-hint {
+            background: #fffae6;
+            border: 2px dashed #f0d000;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* 占位符图片样式 */
+        .placeholder-image {
+            background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="creative-nav">
+        <div class="container">
+            <a class="creative-nav__brand" href="#home" onclick="if(document.querySelector('.detail-page[style*=\'display: block\']')){showHomePage();return false;}">
+                <img src="images/logo.png" alt="Logo" class="nav-logo">
+                [LEAF WANG]
+            </a>
+            <button class="creative-nav__toggle">Toggle Menu</button>
+            <ul class="creative-nav__menu">
+                <li class="creative-nav__item"><a class="creative-nav__link" href="#bio">Bio</a></li>
+                <li class="creative-nav__item"><a class="creative-nav__link" href="#work">Work</a></li>
+                <li class="creative-nav__item"><a class="creative-nav__link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主页内容 -->
+    <main class="creative-home" id="home">
+        <!-- Hero 区域 -->
+        <section class="creative-hero container">
+            <div class="row">
+                <div class="creative-hero__content col-3 push-1">
+                    <h1 class="creative-hero__title">Leaf Wang 小叶</h1>
+                    <hr class="divider divider--right"/>
+                    <ul class="creative-hero__menu">
+                        <li><a href="#work" class="creative-hero__link" data-target="games">Narrative Design</a></li>
+                        <li><a href="#work" class="creative-hero__link" data-target="shorts">Creative Dev</a></li>
+                        <li><a href="#work" class="creative-hero__link" data-target="scripts">AI Narrative Prototype</a></li>
+                        <li><a href="#work" class="creative-hero__link" data-target="scripts">Filmmaking</a></li>
+
+                    </ul>
+                </div>
+                <div class="creative-hero__headshot col-6 push-1">
+                    <img src="images/hero-photo.jpg" alt="Leaf Wang - Portfolio Hero Image" style="width: 100%; height: 550px; object-fit: cover; border-radius: 8px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Bio Section -->
+        <section class="intro" id="bio">
+            <div class="container">
+                <div class="row">
+                    <div class="intro__content col-6">
+                        <h2>"The world's vast and strange, but no vaster and no stranger than our minds are."</h2>
+                        <div class="intro__paragraph">
+                            <p>
+                                Hi, I’m Leaf Wang, a narrative designer and independent game developer. I build stories where emotion is a mechanic, and experiment with how AI can play a role inside those stories — not just to generate content, but to become characters: responsive, fallible, maybe even a little strange.
+                            </p>
+                            
+                            <p>
+                                I come from a screenwriting background, with projects that explore dystopia, identity, and post-human longing. My sci-fi pilot <em>Sex Robot</em> was shortlisted for the 2025 WFTV Kay Mellor Screenwriters’ Lab. My short script <em>After School</em> was an official selection at the 2025 London Global Film Awards. I currently intern as a narrative designer with an interactive film/game studio developing a sci-fi experience in partnership with BOCOM (the best virtual production house in China).
+</p>
+                            <p>
+                                Before moving to the UK, I worked as a script assistant at <a href="https://wiki.d-addicts.com/Yuan_Shuai_(writer)">Yuan Shuai</a> Studio for two years, ghostwrote a novel adaptation of a hit TV series, and published a Chinese web novel (Guide to Be an Emperor) with 20K+ subscribers.
+</p>
+                            <p>
+                                My design instincts are shaped by both film structure and my BA in history. I try to weave private emotion and social observation into the systems I create—even in the most abstract designs, I want there to be a thread that stays connected to the real.One day, I want to make a game that even the harshest film critic would lose themselves in. Until then, I’m learning to stay strange, stay sharp, and build with a little bit of poetry.
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="intro__image-wrapper col-6">
+                        <img src="images/bio-image.jpg" alt="Portfolio Showcase" class="intro__image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section class="work-section" id="work">
+            <div class="container">
+                <div class="row">
+                    <h2 class="work-section__title col-12">Work</h2>
+                    <ul class="work-section__categories col-12">
+                        <li class="work-section__category">
+                            <button class="work-section__filter" data-target="all" data-active="true">All</button>
+                        </li>
+                        <li class="work-section__category">
+                            <button class="work-section__filter" data-target="games" data-active="false">Games</button>
+                        </li>
+                        <li class="work-section__category">
+                            <button class="work-section__filter" data-target="shorts" data-active="false">Shorts</button>
+                        </li>
+                        <li class="work-section__category">
+                            <button class="work-section__filter" data-target="scripts" data-active="false">Scripts</button>
+                        </li>
+                        <li class="work-section__category">
+                            <button class="work-section__filter" data-target="dev-notes" data-active="false">Dev Notes</button>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="work-section__posts">
+                  
+                    
+                    <!-- Games (3 items) -->
+                    <div class="row" data-category="games">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/games/game1-thumb.jpg" alt="Game 1 Screenshot" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Game Design</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">The Reaper's Game</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>
+                                        Genre: AI Word Adventure&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Target Platform: Wechat Mini Game/H5
+                                    </p>
+                                    <p>
+                                        A text-based narrative game built around a simulated Turing Test. Players must answer absurd survival scenarios under a countdown — but behind each judgment is an AI Reaper deciding whether you live or die.
+                                    </p>
+                                    <p>
+                                        I designed and developed the game solo, using Cocos Creator + Node.js, integrating a custom AI evaluation system (via DeepSeek API). 
+                                    </p>
+                                    <a href="#game1-detail" class="read-more" data-detail="game1">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row" data-category="games">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/games/game2-thumb.jpg" alt="Game 2 Screenshot" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Game Design</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">A Robot,for Sex</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>  Genre: Sci-fi RPG&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Target Platform: itch.io</p>
+                                    <p>
+                                        A post-apocalyptic RPG where you play as Lan, a fugitive mother-type sex robot. Journeying through the ruins of Chang’an Empire, Lan seeks her missing son and her own identity.
+                                    </p>
+                                    <p>
+                                        I’m currently prototyping this project using Inworld.ai + Unity +Ink to explore emotional companion systems and AI game's playloop.
+                                    </p>
+                                    <a href="#game2-detail" class="read-more" data-detail="game2">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row" data-category="games">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/games/game3-thumb.jpg" alt="Game 3 Screenshot" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Game Design</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">City A.</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>  Genre: SLG+RPG&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Target Platform: itch.io </p>
+                                    <p>
+                                        Set in a decaying megacity controlled by surveillance states, City A. lets players act as a rogue journalist piecing together urban myths, censored events, and survivor testimonies.
+                                        The game features modular narrative structure, interactive evidence boards, and a choice-based morality system.
+                                    </p>
+                                    <a href="#game3-detail" class="read-more" data-detail="game3">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Short Films (3 items) -->
+                    <div class="row" data-category="shorts">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/shorts/short1-poster.jpg" alt="Short Film 1 Poster" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Short Film</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">The Blubber</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>A stylized horror short set in a dreamy 1950s kitchen, The Blubber tells the story of a housewife who turns her husband's body into soap—one slice at a time.</p>
+                                    <a href="#short1-detail" class="read-more" data-detail="short1">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row" data-category="shorts">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/shorts/short2-poster.jpg" alt="Short Film 2 Poster" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Short Film</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">Runaway girls by the lake</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>This self-edited visual experiment reworks footage I shot in late 2022—moments from my personal life—into a short piece tinted with light sci-fi.</p>
+                                    <a href="#short2-detail" class="read-more" data-detail="short2">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row" data-category="shorts">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/shorts/short3-poster.jpg" alt="Short Film 3 Poster" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Short Film</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">Letter From Letters</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>Set in the aftermath of the 1888 Chinese Exclusion Act, Letter From Letters follows a young Chinese-American who returns to Guangzhou in search of a family and a homeland he barely remembers.</p>
+                                    <p>📍 Created in 3 days · Won an national Silver Award in China</p>
+                                    <a href="#short3-detail" class="read-more" data-detail="short3">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Scripts (5 items) -->
+                    <div class="row" data-category="scripts">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/scripts/script1-cover.jpg" alt="Script 1 Cover" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Screenwriting</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">Sex Robot</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>A sci-fi TV pilot about a low-tier android sex worker who begins to awaken maternal memories she was never meant to have. Shortlisted for the 2025 WFTV Kay Mellor Screenwriters’ Lab.</p>
+                                    <a href="#script1-detail" class="read-more" data-detail="script1">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row" data-category="scripts">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/scripts/script2-cover.jpg" alt="Script 2 Cover" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Screenwriting</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">Adaptation: Citizen Sleeper S1</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>I translated Citizen Sleeper 1 's  branching gameplay and fragmented world into a serialized narrative arc focused on memory, labor, and survival under capitalism.</p>
+                                    <a href="#script2-detail" class="read-more" data-detail="script2">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row" data-category="scripts">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/scripts/script3-cover.jpg" alt="Script 3 Cover" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Screenwriting</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">After School</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>A quiet 15mins short script about childhood intimacy, invisible trauma, and the silences that shape us.</p>
+                                    <p>Offcially Selected in 2025 London Global Film Awards - Best Short Film Script</p>
+                                    <a href="#script3-detail" class="read-more" data-detail="script3">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row" data-category="scripts">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/scripts/script4-cover.jpg" alt="Script 4 Cover" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Screenwriting</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">Tigger Was Crying</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>
+                                        A 10-minute audio drama about two teenage boys and one ruined night.
+                                        A raid goes wrong, emotions spill, and someone shows up in a Tigger suit—carrying a knife.
+                                    </p>
+                                    <p>Will be recorded this autumn (2025)</p>
+                                    <a href="#script4-detail" class="read-more" data-detail="script4">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Dev Notes -->
+                    <div class="row" data-category="dev-notes">
+                        <div class="project-item col-10 push-1">
+                            <div class="project-item__content col-12">
+                                <div class="project-item__category">Development Insights</div>
+                                <h3 class="project-item__title">Creative Philosophy & Methodology</h3>
+                                <div class="project-item__excerpt">
+                                   
+                                   <p>Please waiting for my blog links, technical articles, videos, and other resources...here.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-section__title col-10 push-1">
+                        <h2>Can We Work Together?</h2>
+                    </div>
+                    <div class="contact-section__content col-5 push-1">
+                        <div class="edit-hint">
+                            "MY HEART WILL ALWAYS BEAT FOR THE FUTURE. " &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——Hideo Kojima
+                        </div>
+                        <p>
+                            I'm open to new opportunities across game narrative, interactive fiction, and AI-driven prototypes. I write, design, and build systems where emotion, structure, and play intersect — often blending narrative logic with a filmmaker’s sense of pacing and thoughtful prompt design for AI.
+                        </p>
+                        <p>
+                            I also have hands-on experience in front-end development, basic Node.js backends, and UI/UX prototyping in Figma. All of which contribute to a holistic, system-aware approach to narrative and interaction design.
+                        </p>
+                        <p>
+                            Currently based in London, UK — available for full-time, remote, or hybrid work. Let’s connect:😎<strong>leafwang.pro@outlook.com</strong> 
+                        </p>
+                    </div>
+                    <ul class="contact-section__social col-5">
+                        <li class="contact-section__social-item">
+                            <a class="contact-section__social-link" href="https://www.linkedin.com/in/leaf-wang-2367682b9" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+                        </li>
+                        <li class="contact-section__social-item">
+                            <a class="contact-section__social-link" href="https://discordapp.com/users/1207549159691780157" rel="noopener noreferrer" target="_blank">Discord</a>
+                        </li>
+                        <li class="contact-section__social-item">
+                            <a class="contact-section__social-link" href="https://www.instagram.com/leaf.king_28/" rel="noopener noreferrer" target="_blank">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <section class="creative-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="creative-footer__copyright">COPYRIGHT 2025 Leaf Wang</p>
+                    <p class="creative-footer__credit">Website by LEAF WANG</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail Pages Templates -->
+    
+    <!-- Game 1 Detail Page -->
+    <div id="game1-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">The Reaper's Game(testing)</h1>
+                <hr class="divider"/>
+            </div>
+            <div class="detail-content">
+                <div class="row">
+                    <div class="detail-images col-6" style="display: flex; flex-direction: column; gap: 30px;">
+                        <div style="display: flex; flex-direction: row; gap: 30px; align-items: flex-start;">
+                            <img src="images/games/game1-detail1.jpg" alt="Game 1 Detail Screenshot 1" class="detail-image" style="width: 45%; height: auto; display: block; border-radius: 8px; flex-shrink: 0;">
+                            <img src="images/games/game1-detail2.jpg" alt="Game 1 Detail Screenshot 2" class="detail-image" style="width: 45%; height: auto; display: block; border-radius: 8px; flex-shrink: 0;">
+                        </div>
+                        <img src="images/games/game1-detail3.jpg" alt="Game 1 Detail Screenshot 3 - Landscape" class="detail-image" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+                    </div>
+                    <div class="detail-text col-6">
+                        <div class="edit-hint">
+                            💡 demo link: will be here soon.
+                        </div>
+                        <p>
+                            <strong>The Reaper's Game</strong> is an AI-powered narrative survival game designed for the WeChat Mini Games platform.
+                            Players face <em>absurd life-or-death scenarios</em> — from being trapped in a burning spaceship toilet to confronting a suicidal best friend in deep space — and must respond through free-form text input.
+                        </p>
+
+                        <p>
+                            What makes this game unique is its sophisticated AI judge system: "The Reaper", powered by DeepSeek API.
+                            It evaluates player responses across six dimensions including <em>creativity (abstraction), logic, emotional impact, and narrative tension</em>.
+                            The AI embodies a <em>narcissistic, eloquent death god</em> with four distinct emotional states
+                            (<em>disgust, elegant sarcasm, empathy, sadness</em>) that dynamically respond to player input, delivering commentary laced with historical and philosophical references.
+                        </p>
+
+                        <p>
+                            As the <strong>lead AI narrative prototyper</strong>, I designed a scoring system that rewards imaginative reasoning without compromising feasibility.
+                            I developed a <strong>multi-layered penalty mechanism</strong> for low-effort answers,
+                            a <strong>dynamic mortality threshold</strong> (~55%), and a <strong>relationship tracking system</strong> that lets the Reaper evolve across play sessions.
+                        </p>
+
+                        <p>
+                            The tech stack includes <strong>Cocos Creator (TypeScript)</strong> for front-end,
+                            a <strong>Node.js backend with SQLite</strong> for persistence, and an <strong>asynchronous room-based system</strong> supporting social sharing — essential for viral growth on WeChat.
+                        </p>
+
+                        <p>
+                            This project highlights my capability in <strong>AI-integrated game design</strong> and <strong>cultural localization</strong> for the Chinese market.
+                            It complies with <em>WeChat’s strict content review</em> while preserving humour through metaphor and Western references.
+                            Social mechanics encourage organic growth; personality evolution sustains long-term engagement.
+                        </p>
+
+                        <p>
+                            Currently optimized for over 1000 MAU with <em>analytics-driven tuning</em>, the game demonstrates my ability to turn abstract narrative design into
+                            <strong>scalable, player-centric experiences</strong> using AI technologies.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <a href="#work" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Game 2 Detail Page -->
+    <div id="game2-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">A Robot, for Sex</h1>
+                <hr class="divider"/>
+            </div>
+            <div class="detail-content">
+                <div class="row" style="display: flex; margin: 0;">
+                    <div class="detail-images col-6" style="display: flex; flex-direction: column; align-items: center;">
+                        <video class="detail-video" controls autoplay muted loop playsinline style="width: 66%; height: auto; display: block; margin-bottom: 40px; border-radius: 8px; background: #000;">
+                            <source src="images/games/game2-video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video class="detail-video" controls autoplay muted loop playsinline style="width: 66%; height: auto; display: block; margin-bottom: 20px; border-radius: 8px; background: #000;">
+                            <source src="images/games/game2-video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="detail-text col-6">
+                        <div class="edit-hint">
+                            💡Status: In Development
+                        </div>
+                        <h5>Concept</h5>
+                        <p>
+                            In a post-apocalyptic techno-feudal world, players take on the role of <strong>Lan</strong>—a malfunctioning sex robot haunted by fragments of memory and hunted by imperial forces.
+                        </p>
+
+                        <p>
+                            As Lan explores the <em>Wildfire Club</em> and its fractured society, every choice she makes—whether to betray, protect, or remain silent—shapes her <strong>emotional profile</strong> and <strong>moral trajectory</strong>.
+                        </p>
+
+                        <p>
+                            Early decisions affect <strong>faction alignment</strong>, <strong>street danger probability</strong>, and <strong>NPC affinity</strong>. Players encounter three rival forces—the Emperor’s enforcers, the cyborg syndicates, and rogue AI collectives—each offering trade-offs without clear loyalties.
+                        </p>
+
+                        <p>
+                            The demo culminates in a devastating narrative turn: the death of Icy, a hidden-loyalty follower whose sacrifice unlocks the truth about Lan’s past and sets the stage for the larger journey.
+                        </p>
+
+                        <p><strong>Built in Ink and Unity.</strong> Prototype in progress. Focused on <em>branching dialogue</em>, <em>faction tension</em>, <em>randomized encounters</em>, and <em>loyalty-based follower design</em>.</p>
+
+                        <h5>🎮 Demo Preview</h5>
+                        <p>
+                            A 5–10 minute narrative prototype built in <strong>Ink</strong>, <strong>Unity</strong>, and <strong>Inworld.ai</strong>.
+                        </p>
+
+                        <p>
+                            The demo follows Lan as she explores the Wildfire Club—meeting NPCs from three rival factions, making moral choices that affect future risk and trust, and uncovering the emotional cost of survival.
+                        </p>
+
+                        <ul>
+                            <li><strong>🎯 Estimated playtime:</strong> 5–10 minutes</li>
+                            <li><strong>🧩 Core features:</strong> branching flags · moral drift · randomized events · follower logic</li>
+                        </ul>
+
+                        <p>
+                            The demo ends with the death of Icy—a loyal follower—and a reveal that changes everything.
+                        </p>
+
+                        <p>
+                            🔒 <em>Demo in development.</em> A playable build will be available soon. If you're interested in playtesting or collaboration, feel free to contact me.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <a href="#work" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Game 3 Detail Page -->
+    <div id="game3-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">City A.:Tales That Survive</h1>
+                <hr class="divider"/>
+            </div>
+            <div class="detail-content">
+                <div class="row">
+                    <div class="detail-images col-6">
+                        <img src="images/games/game3-detail1.jpg" alt="Game 3 Detail Screenshot 1" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                        <img src="images/games/game3-detail2.jpg" alt="Game 3 Detail Screenshot 2" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                    </div>
+                    <div class="detail-text col-6">
+                        <div class="edit-hint">
+                            💡 <a href="https://www.canva.com/design/DAGYv_ZPPBM/llB3HNmSoVta_dBqflX1xw/view?utm_content=DAGYv_ZPPBM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1a4c5df95c">click here</a>  for pitch deck presentation
+                        </div>
+                        <p>
+                            <strong>City A: Tales That Survive</strong> is a narrative-driven dystopian game set in <em>City A</em>—a stylized metropolis where political factions, religious orders, and elite dynasties fight to control the narrative.
+                        </p>
+
+                        <p>
+                            You play as a junior journalist trying to survive and ascend within a corrupt press empire. To do that, you collect and reshape <em>urban legends</em>: stories whispered in bars, encoded in symbols, or buried in bureaucratic absurdity.
+                            Each story you publish alters public perception—and with it, your influence in the newsroom.
+                        </p>
+
+                        <p>
+                            <em>Choices aren’t just moral—they’re editorial.</em> Do you tell a cleaner lie? Or a truer myth?
+                        </p>
+
+                        <h4 style="margin-top: 1.5em;">Core Systems</h4>
+
+                        <p><strong>Narrative Fragments as Currency:</strong> Urban legends are collectible, remixable, and playable.</p>
+
+                        <p><strong>Faction Dynamics:</strong> Your stories align you with or against competing ideologies—<em>Faith vs Commerce</em>, <em>Surveillance vs Myth</em>.</p>
+
+                        <p><strong>Reputation Web:</strong> Every quote, betrayal, and protected source leaves a trace in your network.</p>
+
+                        <p><strong>Multiple End States:</strong> Climb to Chief Editor, found an underground zine, or be devoured by your own legend.</p>
+
+                        <h4 style="margin-top: 1.5em;">Theme</h4>
+
+                        <p>
+                            The legends you collect aren’t just about heroes or villains. They’re about the forgotten people—those with broken umbrellas, unpaid bills, lost cats.
+                            In City A, even the weakest stories can destabilize the most powerful lies.
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+            <a href="#work" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Short Film 1 Detail Page -->
+    <div id="short1-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">The Blubber</h1>
+                <hr class="divider"/>
+            </div>
+            <div class="detail-content">
+                <div class="row">
+                    <div class="detail-images col-6">
+                        <img src="images/shorts/short1-still1.jpg" alt="Short Film 1 Still 1" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                        <img src="images/shorts/short1-still2.jpg" alt="Short Film 1 Still 2" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                    </div>
+                    <div class="detail-text col-6">
+                        <div class="edit-hint">
+                            💡 The film is currently in private submission. DM me for the viewing link.
+                        </div>
+                        <h4>Overview</h4>
+                        <p>
+                            Set in a dreamy 1950s kitchen, <em>The Blubber</em> is a 4-minute horror short about a housewife who turns her abusive husband into soap—one slice at a time.
+                            Blending mid-century domestic aesthetics with grindhouse violence, the film explores themes of <em>bodily autonomy</em>, <em>repressed rage</em>, and <em>twisted justice</em>.
+                        </p>
+
+                        <h4>Creative Context</h4>
+                        <p>
+                            This project began with a prompt: “a murder involving soap.” From that constraint, I built a symbolic revenge story rooted in <em>tactility</em>, <em>intimacy</em>, and <em>grotesque beauty</em>.
+                            We had only one month from concept to screen. Within that time, I wrote and revised the script over 30 times, responding to visual tone changes and team feedback in real time.
+                        </p>
+
+                        <h4>My Role</h4>
+                        <p>
+                            As the writer and one of the creative leads, I helped shape both the <em>narrative structure</em> and <em>emotional direction</em>.
+                            This project reflects my <strong>precision as a screenwriter</strong>, my <strong>fast iteration workflow</strong>, and my <strong>collaborative mindset under high pressure</strong>.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <a href="#work" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Short Film 2 Detail Page -->
+    <div id="short2-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">Runaway Girls By the Lake</h1>
+                <hr class="divider"/>
+            </div>
+            <div class="detail-content">
+                <div class="row">
+                    <div class="detail-images col-6">
+                        <img src="images/shorts/short2-still1.jpg" alt="Short Film 2 Still 1" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                        <img src="images/shorts/short2-still2.jpg" alt="Short Film 2 Still 2" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                    </div>
+                    <div class="detail-text col-6">
+                        <div class="edit-hint">
+                            
+                        </div>
+                       
+
+                        <p>
+                            This self-edited visual experiment reworks footage I shot in late 2022—moments from my personal life—into a short piece tinted with light sci-fi.
+                        </p>
+
+                        <p>
+                            Created during the shadow of the pandemic, it channels a sense of <em>isolation</em>, <em>fury</em>, and <em>fragmentation</em> I carried through 2022–2023.
+                        </p>
+
+                        <p>
+                            It may not be a healthy work—but its <strong>editing logic</strong>, <strong>tonal control</strong>, and <strong>fragmented storytelling</strong> trace the path I’ve walked to get here.
+                        </p>
+
+                        <p>
+                            <a href="https://youtu.be/5RjQt2TIn_k?si=HV9nhLhzYeXGmrGG" target="_blank" style="display: inline-block; padding: 8px 16px; background-color: #000; color: #fff; text-decoration: none; border-radius: 4px;">
+                                ▶ Watch the film
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <a href="#work" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Short Film 3 Detail Page -->
+    <div id="short3-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">Letter From Letters</h1>
+                <hr class="divider"/>
+            </div>
+            <div class="detail-content">
+                <div class="row">
+                    <div class="detail-images col-6">
+                        <img src="images/shorts/short3-still1.jpg" alt="Short Film 3 Still 1" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                        <img src="images/shorts/short3-still2.jpg" alt="Short Film 3 Still 2" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                    </div>
+                    <div class="detail-text col-6">
+                        <div class="edit-hint">
+                            🎬 National Short Film Runner-up – China Collegiate Computing Competition
+                        </div>
+                        <p>
+                            Set in the aftermath of the 1888 Chinese Exclusion Act, <em>Letter From Letters</em> follows Chen Yaozu, a young Chinese-American who returns to Guangzhou in search of a family and a homeland he barely remembers.
+                        </p>
+
+                        <p>
+                            As he unearths a chest of unsent letters and long-buried truths, he is forced to reckon with <em>memory</em>, <em>guilt</em>, and <em>identity</em> across two fractured cultures.
+                        </p>
+
+                        <p>
+                            Told across four poetic seasons, this 17-minute period drama blends <strong>stylized visuals</strong>, <strong>traditional Chinese color theory</strong>, and <strong>emotional realism</strong> to explore <em>diaspora</em>, <em>belonging</em>, and the <em>silent legacies of love</em>.
+                        </p>
+                        <p>
+                            <a href="https://vimeo.com/1084321032/51ce549b74" target="_blank" style="display: inline-block; padding: 8px 16px; background-color: #000; color: #fff; text-decoration: none; border-radius: 4px;">
+                                ▶ Watch the film: <em>Letter From Letters</em>
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <a href="#work" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Script 1 Detail Page -->
+    <div id="script1-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">Sex Robot</h1>
+                <hr class="divider"/>
+            </div>
+            <div class="detail-content">
+                <div class="row">
+                    <div class="detail-images col-6">
+                        <img src="images/scripts/script1-detail1.jpg" alt="Script 1 Cover Page" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                        <img src="images/scripts/script1-detail2.jpg" alt="Script 1 Scene Photo" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                    </div>
+                    <div class="detail-text col-6">
+                        <div class="edit-hint">
+
+                        </div>
+                        <p>
+                            <strong>Sex Robot</strong> is a dystopian sci-fi drama (8 x 50') set in the rebuilt mega-city of New Chang’an after World War III. The series follows Lan, a discarded maternal android, as she escapes state control to search for her lost son. Along the way, she becomes an unlikely revolutionary figure in a society that enforces “spinal contracts” to enslave sentient beings.
+                        </p>
+
+                        <p>
+                            Combining a bleak futurist vision with intimate psychological storytelling, the show explores themes of artificial motherhood, memory manipulation, and post-human ethics. As Lan recovers hidden black boxes across toxic zones and corrupted cityscapes, her journey shifts from personal survival to collective rebellion.
+                        </p>
+
+                        <p>
+                            Development Status: Full pilot and series outline complete; pitch materials available. The series blends Eastern political allegory with Western genre structure, aiming for an international adult animation audience in the vein of <em>Cyberpunk: Edgerunners</em> and <em>Undone</em>.
+                        </p>
+                        <p>
+                            <strong>Recognition:</strong> <em>Sex Robot</em> was shortlisted for the 2025 WFTV Kay Mellor Screenwriters’ Lab.
+                        </p>
+
+                        <p>
+                            <a href="https://www.notion.so/Here-s-SEX-ROBOT-2476ff8251f38074ba5dd88fa0bb0a2b?source=copy_link" target="_blank" style="display: inline-block; padding: 8px 16px; background-color: #000; color: #fff; text-decoration: none; border-radius: 4px;">
+                                ▶ Read First 7 Pages (Sex Robot)
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <a href="#work" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Script 2 Detail Page -->
+    <div id="script2-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">Adaption: Citizen Sleeper S1</h1>
+                <hr class="divider"/>
+            </div>
+            <div class="detail-content">
+                <div class="row">
+                    <div class="detail-images col-6">
+                        <img src="images/scripts/script2-detail1.jpg" alt="Script 2 Cover Page" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                        <img src="images/scripts/script2-detail2.jpg" alt="Script 2 Scene Photo" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                    </div>
+                    <div class="detail-text col-6">
+                        <div class="edit-hint">
+                            📍 Adapted independently for academic and portfolio use. Not affiliated with Jump Over the Age.
+                        </div>
+
+                        <h4>Adaptation Content</h4>
+                        <ul>
+                            <li><strong>Coverage</strong> – narrative analysis</li>
+                            <li><strong>4-page Treatment</strong> – story restructure</li>
+                            <li><strong>10-page Script</strong> – adaptation of the opening segment</li>
+                        </ul>
+
+                        <p>
+                            I translated <em>Citizen Sleeper 1</em>'s branching gameplay and fragmented world into a serialized narrative arc focused on <em>memory</em>, <em>labor</em>, and <em>survival under capitalism</em>.
+                        </p>
+
+                        <p>
+                            This adaptation allowed me to closely dissect the game’s <strong>elegant side quest structure</strong> and its <strong>modular branching design</strong>—an architecture that beautifully supports the game's melancholic space-station setting.
+                        </p>
+
+                        <p>
+                            In turning it into a series, I experimented with <em>narrative focus</em>: isolating central story threads, simplifying the structure, and reshaping the world around a more emotionally centered version of the protagonist, Sleeper.
+                        </p>
+
+                        <p>
+                            Through this process of <strong>breakdown, reconstruction, and tonal translation</strong>, I began to observe how shifting emotional emphasis transforms narrative texture—and discovered where my own design instincts lean within interactive storytelling.
+                        </p>
+                        <p>
+                            <a href="https://www.notion.so/This-is-the-first-10-pages-of-my-adaptation-1f358cfa708880c3a523d00583e69177" target="_blank" style="display: inline-block; padding: 8px 16px; background-color: #000; color: #fff; text-decoration: none; border-radius: 4px;">
+                                ▶ Read First 10 Pages (Citizen Sleeper Adaptation)
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <a href="#work" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Script 3 Detail Page -->
+    <div id="script3-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">After School</h1>
+                <hr class="divider" />
+                <p>
+                    <a href="https://www.notion.so/Here-s-AFTER-SCHOOL-2476ff8251f3807bb4eff637d0a2bb07?source=copy_link" target="_blank" style="display: inline-block; padding: 8px 16px; background-color: #000; color: #fff; text-decoration: none; border-radius: 4px;">
+                        ▶ Read Script (AFTER SCHOOL)
+                    </a>
+                </p>
+
+            </div>
+            <div class="detail-content">
+                <div class="row">
+                    <div class="detail-images col-6" style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
+                        <img src="images/scripts/script3-detail1.jpg" alt="Script 3 Cover Page" class="detail-image" style="height: auto; display: block; border-radius: 8px; width: 70%;">
+                        <img src="images/scripts/script3-detail2.jpg" alt="Script 3 Scene Photo" class="detail-image" style="height: auto; display: block; border-radius: 8px; width: 70%;">
+                    </div>
+                    <div class="detail-text col-6" style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
+                        <!-- 竖版海报位置 -->
+                        <img src="images/scripts/script3-poster.jpg" alt="Script 3 Vertical Poster" style="width: 70%; height: auto; display: block; border-radius: 8px;">
+                        <!-- 缩小的detail3图片 -->
+                        <img src="images/scripts/script3-detail3.jpg" alt="Script 3 Additional Visual" style="width: 50%; height: auto; display: block; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+            <a href="#work" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Script 4 Detail Page -->
+    <div id="script4-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">Tigger Was Crying</h1>
+                <hr class="divider"/>
+            </div>
+            <div class="detail-content">
+                <div class="row">
+                    <div class="detail-images col-6">
+                        <img src="images/scripts/script4-detail1.jpg" alt="Script 4 Cover Page" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                        <img src="images/scripts/script4-detail2.jpg" alt="Script 4 Scene Photo" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                    </div>
+                    <div class="detail-text col-6">
+                        <div class="edit-hint">
+                            
+                        </div>
+                        <p>
+                            <em>Tigger Was Crying</em> is a taut, voice-driven audio play that captures the fragile, volatile emotional world of teenage boys in crisis.
+                            Set in the echo chamber of late-night phone calls, the story follows Julian and Gary—two boys bound by online raids, school gossip, and unspoken grief.
+                            As one confronts heartbreak and spirals into violent ideation, the other tries, awkwardly, to keep things light—until it’s too late.
+                        </p>
+
+                        <p>
+                            Written with a sharp ear for how boys dodge vulnerability with dark humour and bravado, the piece explores themes of <em>betrayal</em>, <em>male mental health</em>,
+                            and the thin line between <em>sincerity and performance</em> in the digital age.
+                        </p>
+
+                        <p>
+                            The piece is currently in post-production and will be officially released via <strong>Goldsmiths, University of London</strong> by late 2025.
+                        </p>
+
+                        <p>
+                            <a href="https://www.notion.so/Here-s-Tigger-Was-Crying-2476ff8251f380f0b108c629fdb077de?source=copy_link" target="_blank" style="display: inline-block; padding: 8px 16px; background-color: #000; color: #fff; text-decoration: none; border-radius: 4px;">
+                                ▶ Read Script (Tigger Was Crying)
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="#work" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Navigation menu toggle
+        document.querySelector('.creative-nav__toggle').addEventListener('click', function() {
+            this.classList.toggle('toggled');
+            document.querySelector('.creative-nav__menu').classList.toggle('visible');
+        });
+
+        // Work filtering functionality
+        const filters = document.querySelectorAll('.work-section__filter');
+        const projects = document.querySelectorAll('[data-category]');
+
+        filters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                // Update active state
+                filters.forEach(f => f.setAttribute('data-active', 'false'));
+                this.setAttribute('data-active', 'true');
+                
+                const target = this.getAttribute('data-target');
+                
+                // Show/hide projects
+                projects.forEach(project => {
+                    if (target === 'all' || project.getAttribute('data-category') === target) {
+                        project.style.display = 'block';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]:not([data-detail])').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                
+                // Check if we're currently on a detail page
+                const currentDetailPage = document.querySelector('.detail-page[style*="display: block"]');
+                
+                if (currentDetailPage) {
+                    // If on detail page, first go back to home
+                    showHomePage();
+                    // Then scroll to target after a brief delay
+                    setTimeout(() => {
+                        if (target && !target.classList.contains('detail-page')) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }, 100);
+                } else {
+                    // If on home page, just scroll normally
+                    if (target && !target.classList.contains('detail-page')) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Detail page functionality
+        const readMoreButtons = document.querySelectorAll('.read-more');
+        const detailPages = document.querySelectorAll('.detail-page');
+        const mainContent = document.querySelector('.creative-home');
+        const backButtons = document.querySelectorAll('.back-button');
+        let lastViewedProject = null; // Store the last viewed project element
+
+        // Show detail page
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const detailId = this.getAttribute('data-detail');
+                // Find and store the parent project item
+                lastViewedProject = this.closest('.project-item');
+                showDetailPage(detailId);
+            });
+        });
+
+        // Back to home functionality
+        backButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                showHomePage();
+            });
+        });
+
+        function showDetailPage(detailId) {
+            console.log('showDetailPage called with:', detailId);
+            
+            // Hide main content
+            mainContent.style.display = 'none';
+            
+            // Hide all detail pages
+            detailPages.forEach(page => {
+                page.style.display = 'none';
+            });
+            
+            // Show specific detail page
+            const targetPage = document.getElementById(detailId + '-detail');
+            console.log('Target page element:', targetPage);
+            
+            if (targetPage) {
+                targetPage.style.display = 'block';
+                console.log('Set display to block for:', detailId + '-detail');
+                console.log('Actual display value:', window.getComputedStyle(targetPage).display);
+                
+                // Additional debugging
+                const rect = targetPage.getBoundingClientRect();
+                console.log('Element position:', {
+                    top: rect.top,
+                    left: rect.left,
+                    width: rect.width,
+                    height: rect.height,
+                    visible: rect.width > 0 && rect.height > 0
+                });
+                
+                // Check parent elements
+                let parent = targetPage.parentElement;
+                while (parent && parent !== document.body) {
+                    const parentStyle = window.getComputedStyle(parent);
+                    if (parentStyle.display === 'none' || parentStyle.visibility === 'hidden') {
+                        console.warn('Parent element is hidden:', parent, parentStyle.display, parentStyle.visibility);
+                    }
+                    parent = parent.parentElement;
+                }
+                
+                // Force visibility
+                targetPage.style.visibility = 'visible';
+                targetPage.style.opacity = '1';
+                targetPage.style.position = 'relative';
+                targetPage.style.zIndex = '1000';
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                console.error('Detail page not found:', detailId + '-detail');
+            }
+        }
+
+        function showHomePage() {
+            // Hide all detail pages
+            detailPages.forEach(page => {
+                page.style.display = 'none';
+            });
+            
+            // Show main content
+            mainContent.style.display = 'block';
+            
+            // Scroll to last viewed project if exists
+            if (lastViewedProject) {
+                setTimeout(() => {
+                    lastViewedProject.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }, 100);
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Handle browser back button
+        window.addEventListener('popstate', function(e) {
+            showHomePage();
+        });
+
+        // Initialize - make sure only home page is visible
+        document.addEventListener('DOMContentLoaded', function() {
+            detailPages.forEach(page => {
+                page.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
