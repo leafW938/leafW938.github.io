@@ -547,18 +547,29 @@
 
         .creative-hero__link {
             color: #000;
-            font-size: 18px;
+            font-size: 14px;
             line-height: 1.5;
+            white-space: nowrap;
+            display: block;
+            text-align: right;
+            padding: 0;
+            margin: 0;
         }
 
         @media screen and (min-width: 1024px) {
             .creative-hero__link {
-                font-size: 24px;
+                font-size: 18px;
             }
 
                 .creative-hero__link:hover {
                     text-decoration: line-through;
                 }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .creative-hero__link {
+                font-size: 20px;
+            }
         }
 
         @media screen and (min-width: 1024px) {
@@ -599,11 +610,22 @@
 
         .creative-hero__menu {
             margin: 30px 0;
+            text-align: right;
+            padding: 0;
+            list-style: none;
+            clear: both;
+        }
+
+        .creative-hero__menu li {
+            margin: 0 0 8px 0;
+            padding: 0;
         }
 
         @media screen and (min-width: 1024px) {
             .creative-hero__menu {
                 margin: 50px 0 0;
+                float: right;
+                clear: both;
             }
         }
 
@@ -925,7 +947,7 @@
         }
 
         .contact-section__social-link {
-            color: #000;
+            color: #30a16b;
             font-family: 'Noe Display', Georgia, "Times New Roman", serif;
             font-size: 24px;
             display: inline-block;
@@ -939,7 +961,7 @@
             }
 
                 .contact-section__social-link:hover {
-                    color: #30a16b;
+                    color: #000;
                 }
         }
 
@@ -992,6 +1014,131 @@
             font-style: italic;
         }
 
+        /* Spotlight Section */
+        .spotlight-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .spotlight-section {
+                padding: 100px 0 80px;
+            }
+        }
+
+        .spotlight-section__title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .spotlight-section__title {
+                margin-bottom: 60px;
+            }
+        }
+
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .spotlight-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .spotlight-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+            }
+        }
+
+        .spotlight-card {
+            background: #f9f9f7;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spotlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,.1);
+        }
+
+        .spotlight-card__image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #e0e0e0;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .spotlight-card__image {
+                height: 180px;
+            }
+        }
+
+        .spotlight-card__content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spotlight-card__tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #30a16b;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .spotlight-card__title {
+            font-family: 'Noe Display', Georgia, "Times New Roman", serif;
+            font-size: 20px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .spotlight-card__title {
+                font-size: 18px;
+            }
+        }
+
+        .spotlight-card__desc {
+            font-size: 14px;
+            line-height: 1.55;
+            color: #555;
+            flex: 1;
+            margin-bottom: 15px;
+        }
+
+        .spotlight-card__link {
+            display: inline-block;
+            color: #30a16b;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            transition: color 0.15s;
+            margin-top: auto;
+        }
+
+        .spotlight-card__link:hover {
+            color: #267a52;
+            text-decoration: underline;
+        }
+
         /* 占位符图片样式 */
         .placeholder-image {
             background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
@@ -1032,11 +1179,10 @@
                     <h1 class="creative-hero__title">Leaf Wang 小叶</h1>
                     <hr class="divider divider--right"/>
                     <ul class="creative-hero__menu">
-                        <li><a href="#work" class="creative-hero__link" data-target="games">Narrative Design</a></li>
-                        <li><a href="#work" class="creative-hero__link" data-target="shorts">Creative Dev</a></li>
-                        <li><a href="#work" class="creative-hero__link" data-target="scripts">AI Narrative Prototype</a></li>
-                        <li><a href="#work" class="creative-hero__link" data-target="scripts">Filmmaking</a></li>
-
+                        <li><a href="#work" class="creative-hero__link">Writing for Games, TV & Stage</a></li>
+                        <li><a href="#spotlight" class="creative-hero__link">WFTV Kay Mellor Lab 2025 | Official Selection</a></li>
+                        <li><a href="#spotlight" class="creative-hero__link">Warner Bros. x Youku | Top 10 Shortlist</a></li>
+                        <li><a href="#work" class="creative-hero__link">Full-Stack Prototyping</a></li>
                     </ul>
                 </div>
                 <div class="creative-hero__headshot col-6 push-1">
@@ -1053,24 +1199,80 @@
                         <h2>"The world's vast and strange, but no vaster and no stranger than our minds are."</h2>
                         <div class="intro__paragraph">
                             <p>
-                                Hi, I’m Leaf Wang, a narrative designer and independent game developer. I build stories where emotion is a mechanic, and experiment with how AI can play a role inside those stories — not just to generate content, but to become characters: responsive, fallible, maybe even a little strange.
-                            </p>
-                            
-                            <p>
-                                I come from a screenwriting background, with projects that explore dystopia, identity, and post-human longing. My sci-fi pilot <em>Sex Robot</em> was shortlisted for the 2025 WFTV Kay Mellor Screenwriters’ Lab. My short script <em>After School</em> was an official selection at the 2025 London Global Film Awards. I currently intern as a narrative designer with an interactive film/game studio developing a sci-fi experience in partnership with BOCOM (the best virtual production house in China).
-</p>
-                            <p>
-                                Before moving to the UK, I worked as a script assistant at <a href="https://wiki.d-addicts.com/Yuan_Shuai_(writer)">Yuan Shuai</a> Studio for two years, ghostwrote a novel adaptation of a hit TV series, and published a Chinese web novel (Guide to Be an Emperor) with 20K+ subscribers.
-</p>
-                            <p>
-                                My design instincts are shaped by both film structure and my BA in history. I try to weave private emotion and social observation into the systems I create—even in the most abstract designs, I want there to be a thread that stays connected to the real.One day, I want to make a game that even the harshest film critic would lose themselves in. Until then, I’m learning to stay strange, stay sharp, and build with a little bit of poetry.
+                                Hi, I'm Leaf Wang—a transmedia storyteller and independent game developer. I write for games, television, and stage.
                             </p>
 
+                            <p>
+                                I've collaborated with Huo Jin, former Head of League of Legends IP at Tencent, developing an interactive movie game. I independently designed <em>The Reaper's Game</em>, an AI-native game that explores mortality through adaptive narrative systems. My work at events like Global Game Jam and Game Writing SIG Arcjam has earned shortlist recognition and a Best Narrative Design nomination.
+                            </p>
 
+                            <p>
+                                I'm drawn to stories about dystopia, identity, and posthuman longing—which fuels my fascination with AI and emerging technologies. My sci-fi pilot <em>Sex Robot</em> earned me a place in the prestigious WFTV Kay Mellor Writers' Lab (2025). My dark comedy <em>The Tenants</em> was shortlisted for the WBD Access x Youku Script To Series CH program (top 10). My short film script <em>After School</em> was selected for the 2025 London Global Film Awards. Before moving to the UK, I spent two years as a script assistant at <a href="https://wiki.d-addicts.com/Yuan_Shuai_(writer)">Yuan Shuai Studio</a>, where I ghostwrote a novelization of a hit TV series and published <em>A Guide to Becoming Emperor</em>, a Chinese web novel with over 20,000 subscribers.
+                            </p>
+
+                            <p>
+                                I blend storytelling with technology, drawing on my work across television, film, and theatre to bring fresh perspectives to game design. I weave personal emotion and social observation into the systems I create, continually exploring a game design aesthetic that's distinctly my own.
+                            </p>
+
+                            <p>
+                                I recently graduated with Distinction from Goldsmiths and am currently interning at the Finborough Theatre—a renowned hub for new writing in London—studying lighting and playwriting while developing my next game, <em>City A</em>, with game dev friends.
+                            </p>
                         </div>
                     </div>
                     <div class="intro__image-wrapper col-6">
                         <img src="images/bio-image.jpg" alt="Portfolio Showcase" class="intro__image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spotlight Section -->
+        <section class="spotlight-section" id="spotlight">
+            <div class="container">
+                <h2 class="spotlight-section__title">Spotlight</h2>
+                <div class="spotlight-grid">
+                    <!-- Card 1: WFTV -->
+                    <a href="https://www.wftv.org.uk/post/wftv-2025-kay-mellor-screenwriters-lab-cohort-revealed" target="_blank" rel="noopener noreferrer" class="spotlight-card">
+                        <img src="images/spotlight/wftv-thumb.jpg" alt="WFTV Kay Mellor Lab" class="spotlight-card__image">
+                        <div class="spotlight-card__content">
+                            <span class="spotlight-card__tag">Official Selection 2025</span>
+                            <h3 class="spotlight-card__title">Sex Robot | WFTV Kay Mellor Screenwriters' Lab</h3>
+                            <p class="spotlight-card__desc">Selected for the prestigious screenwriting lab for a dystopian sci-fi pilot exploring maternal android consciousness and the ethics of post-human survival.</p>
+                            <span class="spotlight-card__link">View Announcement →</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 2: Find the One -->
+                    <a href="https://globalgamejam.org/games/2026/find-one-1" target="_blank" rel="noopener noreferrer" class="spotlight-card">
+                        <img src="images/spotlight/findtheone-thumb.jpg" alt="Find the One" class="spotlight-card__image">
+                        <div class="spotlight-card__content">
+                            <span class="spotlight-card__tag">GGJ 2026 / 48-Hour Sprint</span>
+                            <h3 class="spotlight-card__title">Find the One</h3>
+                            <p class="spotlight-card__desc">A chaotic QTE dating simulator satirizing modern digital intimacy. Navigate meme-heavy encounters where "vibe" and muscle memory override logic in a frantic race against the clock.</p>
+                            <span class="spotlight-card__link">View Project →</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 3: Teeth & Tongue -->
+                    <div class="spotlight-card" data-detail="teeth-tongue" style="cursor: pointer;">
+                        <img src="images/spotlight/teethtongue-thumb.jpg" alt="Teeth & Tongue" class="spotlight-card__image">
+                        <div class="spotlight-card__content">
+                            <span class="spotlight-card__tag">ArcJam 2025 Shortlisted / 12-Hour Challenge</span>
+                            <h3 class="spotlight-card__title">Teeth & Tongue</h3>
+                            <p class="spotlight-card__desc">A body-horror interactive narrative exploring themes of identity and consumption. Built in just 12 hours, this project serves as a playable PoC for the upcoming High Keep Child.</p>
+                            <span class="spotlight-card__link">Read More →</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: City A -->
+                    <div class="spotlight-card" data-detail="game3" style="cursor: pointer;">
+                        <img src="images/spotlight/citya-thumb.jpg" alt="City A" class="spotlight-card__image">
+                        <div class="spotlight-card__content">
+                            <span class="spotlight-card__tag">PC / Unity (In Development)</span>
+                            <h3 class="spotlight-card__title">City A: Tales That Survive</h3>
+                            <p class="spotlight-card__desc">A reporter RPG set in an anti-utopian metropolis. Collect and weaponize "narrative fragments" to shape public reality, manipulate factional power struggles, and discover the true cost of truth.</p>
+                            <span class="spotlight-card__link">Read More →</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1162,30 +1364,6 @@
                     <div class="row" data-category="games">
                         <div class="project-item col-10 push-1">
                             <a class="project-item__image-link col-4" href="#" target="_blank">
-                                <img src="images/games/game2-thumb.jpg" alt="Game 2 Screenshot" class="project-item__image">
-                            </a>
-                            <div class="project-item__content col-8">
-                                <div class="project-item__category">Game Design</div>
-                                <h3 class="project-item__title">
-                                    <a class="project-item__link" href="#" target="_blank">A Robot,for Sex</a>
-                                </h3>
-                                <div class="project-item__excerpt">
-                                    <p>  Genre: Sci-fi RPG&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Target Platform: itch.io</p>
-                                    <p>
-                                        A post-apocalyptic RPG where you play as Lan, a fugitive mother-type sex robot. Journeying through the ruins of Chang'an Empire, Lan seeks her missing son and her own identity.
-                                    </p>
-                                    <p>
-                                        I'm currently prototyping this project using Inworld.ai + Unity +Ink to explore emotional companion systems and AI game's playloop.
-                                    </p>
-                                    <a href="#game2-detail" class="read-more" data-detail="game2">Read More →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="row" data-category="games">
-                        <div class="project-item col-10 push-1">
-                            <a class="project-item__image-link col-4" href="#" target="_blank">
                                 <img src="images/games/game3-thumb.jpg" alt="Game 3 Screenshot" class="project-item__image">
                             </a>
                             <div class="project-item__content col-8">
@@ -1204,7 +1382,51 @@
                             </div>
                         </div>
                     </div>
-                    
+
+                    <!-- Find the One -->
+                    <div class="row" data-category="games">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="https://globalgamejam.org/games/2026/find-one-1" target="_blank">
+                                <img src="images/games/findtheone-thumb.jpg" alt="Find the One Screenshot" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Game Jam / GGJ 2026</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="https://globalgamejam.org/games/2026/find-one-1" target="_blank">Find the One</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>Genre: QTE Dating Simulator&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Platform: Web</p>
+                                    <p>
+                                        A chaotic QTE dating simulator satirizing modern digital intimacy. Navigate meme-heavy encounters where "vibe" and muscle memory override logic in a frantic race against the clock.
+                                    </p>
+                                    <a href="https://globalgamejam.org/games/2026/find-one-1" target="_blank" class="read-more">Play on GGJ →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teeth & Tongue -->
+                    <div class="row" data-category="games">
+                        <div class="project-item col-10 push-1">
+                            <a class="project-item__image-link col-4" href="#" target="_blank">
+                                <img src="images/games/teethtongue-thumb.jpg" alt="Teeth & Tongue Screenshot" class="project-item__image">
+                            </a>
+                            <div class="project-item__content col-8">
+                                <div class="project-item__category">Game Jam / ArcJam 2025</div>
+                                <h3 class="project-item__title">
+                                    <a class="project-item__link" href="#" target="_blank">Teeth & Tongue</a>
+                                </h3>
+                                <div class="project-item__excerpt">
+                                    <p>Genre: Body-Horror Interactive Fiction&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Platform: Web</p>
+                                    <p>
+                                        A body-horror interactive narrative exploring themes of identity and consumption. Built in just 12 hours, this project earned a Best Narrative Design nomination at ArcJam 2025.
+                                    </p>
+                                    <a href="#teeth-tongue-detail" class="read-more" data-detail="teeth-tongue">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Short Films (3 items) -->
                     <div class="row" data-category="shorts">
                         <div class="project-item col-10 push-1">
@@ -1369,13 +1591,16 @@
                             "MY HEART WILL ALWAYS BEAT FOR THE FUTURE. " &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——Hideo Kojima
                         </div>
                         <p>
-                            I'm open to new opportunities across game narrative, interactive fiction, and AI-driven prototypes. I write, design, and build systems where emotion, structure, and play intersect — often blending narrative logic with a filmmaker’s sense of pacing and thoughtful prompt design for AI.
+                            I am dedicated to bridging the gap between traditional dramaturgy and complex, systemic gameplay. My approach is defined by a deep curiosity for emerging technologies; I am currently exploring the frontiers of <strong>AI-native game design</strong>, engineering prototypes where large language models drive dynamic character logic and non-linear world-building.
                         </p>
                         <p>
-                            I also have hands-on experience in front-end development, basic Node.js backends, and UI/UX prototyping in Figma. All of which contribute to a holistic, system-aware approach to narrative and interaction design.
+                            My development workflow is anchored in <strong>Unity and Ink</strong>, where I architect intricate narrative systems and SLG mechanics. From designing dual-axis growth systems to fine-tuning AI-driven personality archetypes, I build tools that empower player agency while maintaining cinematic precision.
                         </p>
                         <p>
-                            Currently based in London, UK — available for full-time, remote, or hybrid work. Let’s connect:😎<strong>leafwang.pro@outlook.com</strong> 
+                            Currently based in London, UK. 😎
+                        </p>
+                        <p>
+                            Let's build the future of play: 📧 <strong>kingsmallleaf828@gmail.com</strong>
                         </p>
                     </div>
                     <ul class="contact-section__social col-5">
@@ -1383,7 +1608,7 @@
                             <a class="contact-section__social-link" href="https://www.linkedin.com/in/leaf-wang-2367682b9" rel="noopener noreferrer" target="_blank">LinkedIn</a>
                         </li>
                         <li class="contact-section__social-item">
-                            <a class="contact-section__social-link" href="https://discordapp.com/users/1207549159691780157" rel="noopener noreferrer" target="_blank">Discord</a>
+                            <a class="contact-section__social-link" href="https://discordapp.com/users/1207549159691780157" rel="noopener noreferrer" target="_blank" style="color: #000;">Discord</a>
                         </li>
                         <li class="contact-section__social-item">
                             <a class="contact-section__social-link" href="https://www.instagram.com/leaf.king_28/" rel="noopener noreferrer" target="_blank">Instagram</a>
@@ -1399,7 +1624,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="creative-footer__copyright">COPYRIGHT 2025 Leaf Wang</p>
+                    <p class="creative-footer__copyright">COPYRIGHT 2026 Leaf Wang</p>
                     <p class="creative-footer__credit">Website by LEAF WANG</p>
                 </div>
             </div>
@@ -1468,75 +1693,10 @@
                             </a>
                         </p>
 
-                    </div>
-                </div>
-            </div>
-            <a href="#work" class="back-button">← Back to Home</a>
-        </div>
-    </div>
-
-    <!-- Game 2 Detail Page -->
-    <div id="game2-detail" class="detail-page">
-        <div class="container">
-            <div class="detail-header">
-                <h1 class="detail-title">A Robot, for Sex</h1>
-                <hr class="divider"/>
-            </div>
-            <div class="detail-content">
-                <div class="row" style="display: flex; margin: 0;">
-                    <div class="detail-images col-6" style="display: flex; flex-direction: column; align-items: center;">
-                        <video class="detail-video" controls autoplay muted loop playsinline style="width: 66%; height: auto; display: block; margin-bottom: 40px; border-radius: 8px; background: #000;">
-                            <source src="images/games/game2-video1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <video class="detail-video" controls autoplay muted loop playsinline style="width: 66%; height: auto; display: block; margin-bottom: 20px; border-radius: 8px; background: #000;">
-                            <source src="images/games/game2-video2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="detail-text col-6">
-                        <div class="edit-hint">
-                            💡Status: In Development
-                        </div>
-                        <h5>Concept</h5>
-                        <p>
-                            In a post-apocalyptic techno-feudal world, players take on the role of <strong>Lan</strong>—a malfunctioning sex robot haunted by fragments of memory and hunted by imperial forces.
-                        </p>
-
-                        <p>
-                            As Lan explores the <em>Wildfire Club</em> and its fractured society, every choice she makes—whether to betray, protect, or remain silent—shapes her <strong>emotional profile</strong> and <strong>moral trajectory</strong>.
-                        </p>
-
-                        <p>
-                            Early decisions affect <strong>faction alignment</strong>, <strong>street danger probability</strong>, and <strong>NPC affinity</strong>. Players encounter three rival forces—the Emperor’s enforcers, the cyborg syndicates, and rogue AI collectives—each offering trade-offs without clear loyalties.
-                        </p>
-
-                        <p>
-                            The demo culminates in a devastating narrative turn: the death of Icy, a hidden-loyalty follower whose sacrifice unlocks the truth about Lan’s past and sets the stage for the larger journey.
-                        </p>
-
-                        <p><strong>Built in Ink and Unity.</strong> Prototype in progress. Focused on <em>branching dialogue</em>, <em>faction tension</em>, <em>randomized encounters</em>, and <em>loyalty-based follower design</em>.</p>
-
-                        <h5>🎮 Demo Preview</h5>
-                        <p>
-                            A 5–10 minute narrative prototype built in <strong>Ink</strong>, <strong>Unity</strong>, and <strong>Inworld.ai</strong>.
-                        </p>
-
-                        <p>
-                            The demo follows Lan as she explores the Wildfire Club—meeting NPCs from three rival factions, making moral choices that affect future risk and trust, and uncovering the emotional cost of survival.
-                        </p>
-
-                        <ul>
-                            <li><strong>🎯 Estimated playtime:</strong> 5–10 minutes</li>
-                            <li><strong>🧩 Core features:</strong> branching flags · moral drift · randomized events · follower logic</li>
-                        </ul>
-
-                        <p>
-                            The demo ends with the death of Icy—a loyal follower—and a reveal that changes everything.
-                        </p>
-
-                        <p>
-                            🔒 <em>Demo in development.</em> A playable build will be available soon. If you're interested in playtesting or collaboration, feel free to contact me.
+                        <p style="margin-top: 20px;">
+                            <a href="https://youtube.com/shorts/-wfpz3cK5-A" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #000; color: #fff; text-decoration: none; border-radius: 4px;">
+                                ▶ Watch Demo Video
+                            </a>
                         </p>
 
                     </div>
@@ -1972,6 +2132,53 @@
         </div>
     </div>
 
+    <!-- Teeth & Tongue Detail Page -->
+    <div id="teeth-tongue-detail" class="detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <h1 class="detail-title">Teeth & Tongue</h1>
+                <hr class="divider"/>
+            </div>
+            <div class="detail-content">
+                <div class="row">
+                    <div class="detail-images col-6">
+                        <img src="images/games/teethtongue-detail1.jpg" alt="Teeth & Tongue Screenshot" class="detail-image" style="height: auto; display: block; margin-bottom: 20px; border-radius: 8px;">
+                    </div>
+                    <div class="detail-text col-6">
+                        <div class="edit-hint">
+                            🏆 ArcJam 2025 Shortlisted | 12-Hour Game Jam Challenge
+                        </div>
+                        <h4>Overview</h4>
+                        <p>
+                            <em>Teeth & Tongue</em> is a body-horror interactive narrative exploring themes of identity, consumption, and transformation. Built in just 12 hours during the Game Writing SIG Arcjam 2025, this project earned a <strong style="color: #000;">Best Narrative Design nomination</strong>.
+                        </p>
+
+                        <h4>Concept</h4>
+                        <p>
+                            The player navigates a visceral, dreamlike space where language itself becomes flesh. Words have weight, choices have consequences measured in bone and sinew. The narrative probes the boundaries between self and other, asking what we consume and what consumes us.
+                        </p>
+
+                        <h4>Design Philosophy</h4>
+                        <p>
+                            This project serves as a playable proof-of-concept for <em>High Keep Child</em>, an upcoming larger-scale narrative game. It demonstrates my ability to create compelling interactive fiction under extreme time constraints while maintaining thematic coherence and emotional impact.
+                        </p>
+
+                        <h4>Recognition</h4>
+                        <p>
+                            Shortlisted at ArcJam 2025, a competitive 12-hour game writing challenge organized by the Game Writing SIG. Within these 12 hours, I taught myself Arcweave—a node-based narrative design tool—from scratch and built this complete interactive experience.
+                        </p>
+
+                        <p style="margin-top: 40px;">
+                            <a href="https://leafw938.itch.io/teeth-tongue" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #30a16b; color: #fff; text-decoration: none; border-radius: 4px;">
+                                ▶ Play the Game
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="#spotlight" class="back-button">← Back to Spotlight</a>
+        </div>
+    </div>
 
     <!-- JavaScript Interactions -->
     <script>
@@ -2044,14 +2251,28 @@
         const mainContent = document.querySelector('.creative-home');
         const backButtons = document.querySelectorAll('.back-button');
         let lastViewedProject = null; // Store the last viewed project element
+        let lastViewedSpotlight = null; // Store the last viewed spotlight card
 
-        // Show detail page
+        // Show detail page from work section
         readMoreButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
                 const detailId = this.getAttribute('data-detail');
                 // Find and store the parent project item
                 lastViewedProject = this.closest('.project-item');
+                lastViewedSpotlight = null;
+                showDetailPage(detailId);
+            });
+        });
+
+        // Spotlight cards with detail pages
+        const spotlightCards = document.querySelectorAll('.spotlight-card[data-detail]');
+        spotlightCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                const detailId = this.getAttribute('data-detail');
+                lastViewedSpotlight = this;
+                lastViewedProject = null;
                 showDetailPage(detailId);
             });
         });
@@ -2121,12 +2342,19 @@
             detailPages.forEach(page => {
                 page.style.display = 'none';
             });
-            
+
             // Show main content
             mainContent.style.display = 'block';
-            
-            // Scroll to last viewed project if exists
-            if (lastViewedProject) {
+
+            // Scroll to last viewed item (spotlight or project)
+            if (lastViewedSpotlight) {
+                setTimeout(() => {
+                    lastViewedSpotlight.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }, 100);
+            } else if (lastViewedProject) {
                 setTimeout(() => {
                     lastViewedProject.scrollIntoView({
                         behavior: 'smooth',
